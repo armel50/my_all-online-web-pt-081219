@@ -4,6 +4,8 @@ def my_all?(collection)
   array = []
   i = 0
   while i < collection.size do
-    yield(collection[i])
-  end
+   array << yield(collection[i])
+    i += 1
+  end 
+  array.include?(false) ? false : true
 end
